@@ -15,7 +15,7 @@ echo "Launch Pypiserver"
 docker-compose -f docker-compose-travis.yml up -d pypiserver 
 docker ps -a
 
-export DOCKERHOST=$(ip route | awk '/docker/ { print $NF }')
+export DOCKERHOST=$(hostname)
 
 echo "--> BUILDING apsl/thumbor"
 docker build --build-arg DOCKERHOST=$DOCKERHOST -f thumbor/Dockerfile -t apsl/thumbor thumbor/
