@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 if [ -z "$THUMBOR_VERSION" ]
 then
   THUMBOR_VERSION="6.3.3rc.$(git rev-parse HEAD)"
