@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -z "$THUMBOR_VERSION" ]
 then
-  THUMBOR_VERSION="6.3.0"
+  THUMBOR_VERSION="6.3.3rc.$(git rev-parse HEAD)"
 fi
 
 echo "THUMBOR VERSION: $THUMBOR_VERSION"

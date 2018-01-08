@@ -288,6 +288,14 @@ HTTP_LOADER_FORWARD_USER_AGENT = {{ HTTP_LOADER_FORWARD_USER_AGENT | default(Fal
 ## Defaults to: Thumbor/6.3.0
 HTTP_LOADER_DEFAULT_USER_AGENT = '{{ HTTP_LOADER_DEFAULT_USER_AGENT | default('Thumbor/6.3.0') }}'
 
+## Indicates whether thumbor should forward the querystring of the request
+## Defaults to: False
+HTTP_LOADER_FORWARD_QUERYSTRING = {{ HTTP_LOADER_FORWARD_QUERYSTRING | default(False) }}
+
+## Indicates which of the request querystring parameters should be forwarded
+## Defaults to: []
+HTTP_LOADER_FORWARD_QUERYSTRING_WHITELIST = {{ HTTP_LOADER_FORWARD_QUERYSTRING_WHITELIST | default([]) }}
+
 ## The proxy host needed to load images through
 ## Defaults to: None
 HTTP_LOADER_PROXY_HOST = {{ HTTP_LOADER_PROXY_HOST | default(None) }}
