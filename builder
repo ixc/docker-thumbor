@@ -74,3 +74,6 @@ export DOCKERHOST=$(hostname)
 # docker tag apsl/remotecv apsl/remotecv:latest
 
 docker build --build-arg DOCKERHOST=$DOCKERHOST -f thumbor/Dockerfile -t "interaction/thumbor:$THUMBOR_VERSION" thumbor/
+
+docker-compose -f docker-compose-travis.yml stop pypiserver
+docker-compose -f docker-compose-travis.yml rm -fv pypiserver
