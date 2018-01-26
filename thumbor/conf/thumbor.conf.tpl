@@ -218,6 +218,10 @@ AWS_SECRET_KEY = '{{ AWS_SECRET_ACCESS_KEY | default('') }}'
 ## Defaults to: True
 ENABLE_ETAGS = {{ ENABLE_ETAGS | default(True) }}
 
+## Use MD5 algorythm to generate etags
+## Defaults to: False
+MD5_ETAGS = {{ MD5_ETAGS | default(False) }}
+
 ################################################################################
 
 
